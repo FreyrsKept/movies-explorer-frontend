@@ -1,0 +1,26 @@
+main {
+  display: block;
+}
+
+.section-heading-main {
+  margin: 0;
+  font-family: "Inter-Regular", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 5rem;
+  line-height: 1.16;
+  font-weight: 400;
+  letter-spacing: -0.2rem;
+}
+
+@media screen and (max-width: 767px) {
+  .section-heading-main {
+    font-size: calc(3rem + 34 * (100vw - 320px) / 767);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section-heading-main {
+    line-height: 1.2333333333;
+    letter-spacing: -0.1rem;
+  }
+}

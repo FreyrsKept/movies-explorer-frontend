@@ -1,0 +1,113 @@
+.entry__paragraph {
+  font-family: "Inter-Regular", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1.2142857143;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.entry__wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 396px;
+  margin: 0 auto;
+  padding: 5.5% 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .entry__wrapper {
+    padding-top: 30%;
+    padding-bottom: 30%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .entry__wrapper {
+    align-items: center;
+    max-width: 260px;
+    padding-top: 18%;
+    padding-bottom: 18%;
+  }
+}
+
+.entry__form {
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter-Regular", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #8b8b8b;
+}
+
+.entry__fieldset {
+  padding: 0;
+  margin: 0 0 125px;
+  border: none;
+}
+
+@media screen and (max-width: 480px) {
+  .entry__fieldset {
+    margin-bottom: 216px;
+  }
+}
+
+.entry__fieldset_margin_big {
+  margin-bottom: 194px;
+}
+
+@media screen and (max-width: 480px) {
+  .entry__fieldset_margin_big {
+    margin-bottom: 285px;
+  }
+}
+
+.entry__heading {
+  margin: 0;
+  padding: 40px 0;
+  font-family: "Inter-Medium", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 2.4rem;
+  line-height: 1.2083333333;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .entry__heading {
+    padding-top: 46px;
+    padding-bottom: 80px;
+  }
+}
+
+.entry__paragraph {
+  margin: 16px 0 0;
+  letter-spacing: 0.02rem;
+  color: #8b8b8b;
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .entry__paragraph {
+    font-size: 1.2rem;
+    line-height: 1.25;
+  }
+}
+
+.btn-entry {
+  width: 100%;
+  height: 45px;
+  box-sizing: border-box;
+  font-family: "Inter-Medium", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1.2142857143;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #fff;
+  background-color: #4285f4;
+  border-radius: 0.3rem;
+}

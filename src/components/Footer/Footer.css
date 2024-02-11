@@ -1,0 +1,105 @@
+.footer {
+  margin: 125px 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    margin: 95px 0 0;
+  }
+}
+
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: 36% 28% 36%;
+  grid-template-areas: "heading heading heading" "copyright . links";
+  padding: 62px 0 20px;
+}
+
+@media screen and (max-width: 1279px) {
+  .footer__wrapper {
+    margin-right: calc(30px + 68 * (100vw - 768px) / 1279);
+    margin-left: calc(30px + 68 * (100vw - 768px) / 1279);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer__wrapper {
+    margin-right: calc(10px + 34 * (100vw - 320px) / 767);
+    margin-left: calc(10px + 34 * (100vw - 320px) / 767);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer__wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas: "heading" "links" "copyright";
+    justify-items: center;
+  }
+}
+
+.footer__wrapper>* {
+  font-family: "Inter-Regular", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 1.3rem;
+  line-height: 1.2307692308;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.footer__copyright {
+  grid-area: copyright;
+}
+
+@media screen and (max-width: 480px) {
+  .footer__copyright {
+    padding-top: 30px;
+    font-size: 1.2rem;
+    line-height: 1.25;
+    color: #8b8b8b;
+  }
+}
+
+.footer__heading {
+  grid-area: heading;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  color: #8b8b8b;
+  border-bottom: 1px solid #424242;
+}
+
+@media screen and (max-width: 480px) {
+  .footer__heading {
+    margin-bottom: 32px;
+    font-size: 1.2rem;
+    line-height: 1.25;
+  }
+}
+
+.footer__links {
+  grid-area: links;
+  justify-self: end;
+  display: flex;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .footer__links {
+    justify-self: auto;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 12px;
+    font-size: 1.2rem;
+    line-height: 1.25;
+  }
+}
+
+.footer__link {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}

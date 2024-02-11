@@ -1,0 +1,52 @@
+.progress-bar {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  background-color: #303030;
+}
+
+.progress-bar>* {
+  padding: 9px 0;
+  font-family: "Inter-Regular", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1.2142857143;
+  font-weight: 400;
+  letter-spacing: -0.2rem;
+  letter-spacing: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .progress-bar>* {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 1.1rem;
+    line-height: 1.1818181818;
+  }
+}
+
+.progress-bar__stage-1 {
+  flex-grow: 1;
+  color: #000;
+  background-color: #3ddc84;
+}
+
+.progress-bar__stage-2 {
+  flex-grow: 5.05;
+}
+
+@media screen and (max-width: 1024px) {
+  .progress-bar__stage-2 {
+    flex-grow: 5.8;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .progress-bar__stage-2 {
+    flex-grow: 2.6;
+  }
+}
+
+progress {
+  vertical-align: baseline;
+}

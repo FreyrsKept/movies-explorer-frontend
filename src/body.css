@@ -1,0 +1,259 @@
+html {
+  color: #fff;
+  font-size: 10px;
+  background-color: #202020;
+  scroll-behavior: smooth;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@font-face {
+  font-family: Inter-Regular;
+  font-style: normal;
+  font-display: swap;
+  src: url("./vendor/fonts/Inter-Regular.woff") format("truetype");
+}
+
+@font-face {
+  font-family: Inter-Medium;
+  font-style: normal;
+  font-display: swap;
+  src: url("./vendor/fonts/Inter-Medium.woff") format("truetype");
+}
+
+@font-face {
+  font-family: Suisse-Intl-Regular;
+  font-style: normal;
+  font-display: swap;
+  src: url("./vendor/fonts/Inter-Black.woff") format("truetype");
+}
+
+.page_no-scroll {
+  overflow: hidden;
+}
+
+.layout-2-column {
+  display: flex;
+  justify-content: space-between;
+}
+
+.layout-2-column>* {
+  flex-basis: 46.5%;
+}
+
+@media screen and (max-width: 480px) {
+  .layout-2-column {
+    flex-direction: column;
+    row-gap: 56px;
+    margin: 60px 0;
+  }
+}
+
+.section-heading {
+  margin: 0;
+  padding-bottom: 23px;
+  font-family: "Inter-Regular", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 2.2rem;
+  line-height: 1.2272727273;
+  font-weight: 400;
+  letter-spacing: -0.1rem;
+  border-bottom: 1px solid #dadada;
+}
+
+@media screen and (max-width: 480px) {
+  .section-heading {
+    font-size: 1.8rem;
+    line-height: 1.2222222222;
+    letter-spacing: -0.07rem;
+    padding-bottom: 28px;
+  }
+}
+
+.paragraph {
+  margin: 0;
+  font-family: "Inter-Regular", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 1.3rem;
+  line-height: 1.4285714286;
+  font-weight: 400;
+  letter-spacing: 0.03rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .paragraph {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .paragraph {
+    font-size: 1.1rem;
+    line-height: 1.4545454545;
+  }
+}
+
+.paragraph-s {
+  font-family: "Inter-Medium", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1.2142857143;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.paragraph-s:hover {
+  opacity: 70%;
+}
+
+.text-additional-1 {
+  font-family: "Inter-Medium", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1.2142857143;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #8b8b8b;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .text-additional-1 {
+    font-family: "Suisse-Intl-Regular", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .text-additional-1 {
+    font-size: 1.1rem;
+    line-height: 1.1818181818;
+  }
+}
+
+.link {
+  font-family: "Inter-Medium", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 1.3333333333;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.link:hover {
+  opacity: 70%;
+}
+
+.link_color_accent {
+  color: #000;
+}
+
+.link_color_accent:hover {
+  opacity: 80%;
+}
+
+@media screen and (max-width: 480px) {
+  .link {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+.input {
+  width: 100%;
+  height: 32px;
+  margin-bottom: 24px;
+  padding: 0;
+  font-family: "Inter-Medium", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1.2142857143;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #fff;
+  border-bottom: 1px solid #424242;
+}
+
+.input:focus {
+  border-bottom-color: #4285f4;
+}
+
+.btn {
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 80%;
+}
+
+.btn-auth {
+  padding: 8px 20px;
+  background-color: #3ddc84;
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 480px) {
+  .btn-auth {
+    padding: 5px 12px;
+  }
+}
+
+.btn-search {
+  width: 34px;
+  height: 34px;
+  margin: 0;
+  padding: 0;
+  background-color: #4285f4;
+  border-radius: 50%;
+}
+
+.btn-search::before {
+  content: url(../src/images/find.svg);
+}
+
+@media screen and (max-width: 480px) {
+  .btn-search {
+    position: relative;
+    bottom: 6px;
+    width: 38px;
+  }
+
+  .btn-search::before {
+    content: url(/src/images/find.svg);
+  }
+}
+
+.avatar {
+  width: 270px;
+  height: 327px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .avatar {
+    width: 255px;
+    height: 307px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .avatar {
+    order: 1;
+    width: 292px;
+    height: 352px;
+  }
+}

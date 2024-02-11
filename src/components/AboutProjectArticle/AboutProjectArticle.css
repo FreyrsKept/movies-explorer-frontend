@@ -1,0 +1,40 @@
+.diploma-work {
+  display: flex;
+  flex-direction: column;
+  row-gap: 26px;
+  margin: 70px 0 110px;
+}
+
+.diploma-work__heading {
+  flex-grow: 1;
+  margin: 0;
+  font-family: "Inter-Regular", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: -0.08rem;
+}
+
+@media screen and (max-width: 767px) {
+  .diploma-work__heading {
+    font-size: calc(1.8rem + 3.4 * (100vw - 320px) / 767);
+    line-height: 1.2222222222;
+    letter-spacing: -0.07rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .diploma-work {
+    row-gap: 22px;
+    margin-top: 68px;
+    margin-bottom: 93px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .diploma-work {
+    row-gap: 16px;
+    margin: 0;
+  }
+}

@@ -1,0 +1,95 @@
+.about-me__wrapper {
+  display: grid;
+  grid-template-columns: 52.6% max-content;
+  justify-content: space-between;
+  padding: 66px 0 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-me__wrapper {
+    padding-bottom: 91px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-me__wrapper {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding-bottom: 69px;
+  }
+}
+
+.about-me__biography {
+  max-width: 600px;
+}
+
+@media screen and (max-width: 767px) {
+  .about-me__biography {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .about-me__heading {
+    font-size: calc(4rem + 23.8 * (100vw - 768px) / 1279);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about-me__heading {
+    line-height: 1;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-me__heading {
+    padding-top: 35px;
+  }
+}
+
+.about-me__subheading {
+  margin: 0;
+  padding-top: 18px;
+  font-family: "Inter-Medium", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 1.1111111111;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-me__subheading {
+    padding-top: 14px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-me__subheading {
+    padding-top: 22px;
+    font-size: 1.1rem;
+    line-height: 1.4545454545;
+  }
+}
+
+.about-me__paragraph {
+  padding: 26px 0 99px;
+  line-height: 1.5714285714;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-me__paragraph {
+    padding-top: 20px;
+    padding-bottom: 87px;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-me__paragraph {
+    padding-bottom: 42px;
+    line-height: 1.4545454545;
+  }
+}
