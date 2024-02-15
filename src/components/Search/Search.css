@@ -1,5 +1,5 @@
 .search {
-  padding-top: 67px;
+  padding-top: 83px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -29,10 +29,9 @@
 }
 
 .search-film {
-  width: 100%;
+  width: 99%;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #424242;
 }
 
 .search-film:focus-within {
@@ -40,15 +39,19 @@
 }
 
 .search-film__input {
-  width: 96%;
+  width: 95%;
+  height: 35px;
   padding-bottom: 13px;
   font-family: "Inter-Medium", "Arial", "Helvetica", sans-serif;
   font-style: normal;
-  font-size: 2.8rem;
+  font-size: 1.4rem;
   line-height: 1.2142857143;
   font-weight: 500;
   letter-spacing: 0;
-  color: #fff;
+  background: rgba(47, 47, 47, 1);
+  text-align: left;
+  padding-left: 20px;
+  border-radius: 7px;
 }
 
 .search-film__input::-moz-placeholder {

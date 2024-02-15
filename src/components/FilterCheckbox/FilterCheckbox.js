@@ -1,7 +1,6 @@
 import React from "react";
 
 function FilterCheckbox() {
-  // TODO: добавить переключение чекбокса с клавиатуры на 3-м этапе
 
   return (
     <div className="filter-checkbox">

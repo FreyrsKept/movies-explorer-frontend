@@ -2,7 +2,7 @@ import React from "react";
 import { useMatch } from "react-router-dom";
 import PropTypes from "prop-types";
 
-import Logo from "../../images/logo.png";
+import Logo from "../Logo/Logo.js";
 
 function Entry({ children, heading, name, btn, btnAriaLabel }) {
   const href = useMatch({ path: `${window.location.pathname}`, end: false });
@@ -10,6 +10,10 @@ function Entry({ children, heading, name, btn, btnAriaLabel }) {
 
   const inputs = children.slice(0, -1);
   const link = children.slice(-1);
+
+  // function handleSubmit(evt) {
+  //   evt.preventDefault();
+  // }
 
   return (
     <div className="entry">

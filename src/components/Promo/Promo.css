@@ -21,8 +21,6 @@
 @media screen and (max-width: 767px) {
   .promo__wrapper {
     row-gap: calc(212px + 173.4 * (100vw - 320px) / 767);
-    margin-right: calc(14px + 10.2 * (100vw - 320px) / 767);
-    margin-left: calc(14px + 10.2 * (100vw - 320px) / 767);
     padding-top: calc(220px + 221 * (100vw - 320px) / 767);
   }
 }

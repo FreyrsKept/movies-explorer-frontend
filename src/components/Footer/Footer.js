@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <footer className="footer">
-      <div className="wrapper footer__wrapper">
+      <div className="footer__wrapper">
         <h2 className="footer__heading">
           Учебный проект Яндекс.Практикум х BeatFilm.
         </h2>

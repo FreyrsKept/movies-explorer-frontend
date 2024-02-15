@@ -41,7 +41,6 @@ function Navigation() {
         </ul>
       </nav>
       <Link className="link link-profile" to={"/profile"}>
-        Аккаунт
       </Link>
     </div>
   );
