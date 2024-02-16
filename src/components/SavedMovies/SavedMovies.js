@@ -6,19 +6,9 @@ import Footer from "../Footer/Footer.js";
 
 function SavedMovies() {
   const icon = (
-    <svg
-      width="8"
-      height="8"
-      viewBox="0 0 8 8"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M4 4.94287L6.35705 7.29992L7.41771 6.23926L5.06066 3.88221L7.29992 1.64295L6.23926 0.582291L4 2.82155L1.76086 0.582406L0.700195 1.64307L2.93934 3.88221L0.582406 6.23914L1.64307 7.2998L4 4.94287Z"
-        fill="white"
-      />
+    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="21" height="21" rx="10.5" fill="#313131" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 11.4429L12.857 13.7999L13.9177 12.7393L11.5607 10.3822L13.7999 8.14295L12.7393 7.08229L10.5 9.32155L8.26086 7.08241L7.2002 8.14307L9.43934 10.3822L7.08241 12.7391L8.14307 13.7998L10.5 11.4429Z" fill="white" />
     </svg>
   );
 

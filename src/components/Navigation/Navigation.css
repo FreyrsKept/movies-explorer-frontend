@@ -124,12 +124,18 @@
 .techs-list,
 .link-profile,
 .portfolio__link,
-.nav__list,
-.layout-nav {
+.nav__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0px 17px 0px 380px;
+}
+
+.layout-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 35px 0px 380px;
 }
 
 .techs-list__item,

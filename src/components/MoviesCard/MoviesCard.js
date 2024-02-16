@@ -17,6 +17,7 @@ function MoviesCard({ card: { nameRU, duration, image }, icon }) {
     setActive(!isActive);
   };
 
+
   return (
     <article className="movies-card">
       <img
@@ -31,7 +32,7 @@ function MoviesCard({ card: { nameRU, duration, image }, icon }) {
       <button
         onClick={handleToggle}
         id="movieSave"
-        className={`btn movies-card__btn-favourite${isActive ? "movies-card__btn-favourite_active" : ""}`}
+        className={`btn ${isActive ? "movies-card__btn-favourite" : "movies-card__btn-favourite_active"}`}
         type="button"
         aria-label="Добавление карточки с фильмом в избранные"
       >

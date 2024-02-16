@@ -226,10 +226,10 @@ html {
 }
 
 .btn-search {
-  width: 34px;
-  height: 34px;
-  margin: 0;
-  padding: 0;
+  width: 0px;
+  height: 20px;
+  margin: 0px;
+  padding: 0px 31px 0px 0px;
 }
 
 .btn-search::before {

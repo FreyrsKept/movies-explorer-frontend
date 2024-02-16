@@ -19,7 +19,7 @@ function MoviesCardList({ icon }) {
           ))}
         </div>
         <button
-          className="btn movies-gallery__btn-more"
+          className="movies-gallery__btn-more"
           type="button"
           aria-label="Отображение новых карточек с фильмами в галерее"
         >
