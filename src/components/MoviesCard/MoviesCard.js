@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 function MoviesCard({ card: { nameRU, duration, image }, icon }) {
@@ -12,29 +12,31 @@ function MoviesCard({ card: { nameRU, duration, image }, icon }) {
     return hours ? `${hours}ч` : `${minutes}м`;
   }
 
-  // TODO: ДЛЯ СТАТИЧНОГО МАКЕТА
-  let isFavouriteCard = false;
+  const [isActive, setActive] = useState('false');
+  const handleToggle = () => {
+    setActive(!isActive);
+  };
 
   return (
     <article className="movies-card">
-      <div className="movies-card__description">
-        <h2 className="movies-card__heading">{nameRU}</h2>
-        <span className="movies-card__duration">{countTime(duration)}</span>
-      </div>
-      <button
-        className={`btn movies-card__btn-favourite${
-          (isFavouriteCard && " movies-card__btn-favourite_active") || ""
-        }`}
-        type="button"
-        aria-label="Добавление карточки с фильмом в избранные"
-      >
-        {icon}
-      </button>
       <img
         className="movies-card__photo"
         src={image}
         alt={`Карточка с фильмом, называющимся "${nameRU}"`}
       />
+      <div className="movies-card__description">
+        <h2 className="movies-card__heading">{nameRU}</h2>
+        <span className="movies-card__duration">{countTime(duration)}</span>
+      </div>
+      <button
+        onClick={handleToggle}
+        id="movieSave"
+        className={`btn movies-card__btn-favourite${isActive ? "movies-card__btn-favourite_active" : ""}`}
+        type="button"
+        aria-label="Добавление карточки с фильмом в избранные"
+      >
+        {icon}
+      </button>
     </article>
   );
 }
