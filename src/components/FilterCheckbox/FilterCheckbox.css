@@ -8,8 +8,7 @@
 
 @media screen and (max-width: 768px) {
   .filter-checkbox {
-    flex-direction: row-reverse;
-    justify-content: end;
+    justify-content: flex-start;
   }
 }
 

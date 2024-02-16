@@ -238,7 +238,6 @@ html {
 
 @media screen and (max-width: 480px) {
   .btn-search {
-    position: relative;
     bottom: 6px;
     width: 38px;
   }

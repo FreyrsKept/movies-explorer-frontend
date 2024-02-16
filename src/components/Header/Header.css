@@ -4,7 +4,7 @@
   align-items: center;
   -moz-column-gap: 44px;
   column-gap: 44px;
-  padding: 10px 0px 15px;
+  padding: 10px 0px 15px 0px;
 }
 
 @media screen and (max-width: 1279px) {
