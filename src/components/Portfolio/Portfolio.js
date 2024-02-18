@@ -7,7 +7,7 @@ function Portfolio() {
     <section className="portfolio">
       <div className="wrapper wrapper_indent_s">
         <h2 className="portfolio__heading">Портфолио</h2>
-        <ul className="portfolio__wrapper list">
+        <ul className="portfolio__wrapper">
           <PortfolioProject
             url={"https://github.com/FreyrsKept/how-to-learn"}
             heading={"Статичный сайт"}

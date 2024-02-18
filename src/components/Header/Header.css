@@ -25,13 +25,15 @@
   display: flex;
   align-items: center;
   -moz-column-gap: 30px;
-  column-gap: 30px;
-  max-width: 183px;
+  column-gap: 27px;
+  max-width: 181px;
 }
 
 @media screen and (max-width: 768px) {
   .header__auth {
-    max-width: 155px;
+    margin: -4px 6px 0px -7px;
+    padding: 2px 0px 0px 0px;
+    max-width: 154px;
   }
 }
 

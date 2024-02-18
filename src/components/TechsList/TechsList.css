@@ -1,5 +1,6 @@
 .techs-list {
   -moz-column-gap: 10px;
+  margin: 3px 37px 0px 0px;
   column-gap: 10px;
   width: calc(100% - 450px);
   font-family: "Inter-Regular", "Arial", "Helvetica", sans-serif;
@@ -18,7 +19,7 @@
 
 @media screen and (max-width: 1024px) {
   .techs-list {
-    width: calc(100% - 20px);
+    width: calc(100% - 12px);
     font-size: 1.2rem;
   }
 }
@@ -35,6 +36,14 @@
   .techs-list {
     justify-content: space-between;
     width: 180px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .techs-list {
+    margin: -2px 0px 0px -18px;
+    padding: 0;
+    list-style-type: none;
   }
 }
 

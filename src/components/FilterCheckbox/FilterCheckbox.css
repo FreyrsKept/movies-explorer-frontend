@@ -89,6 +89,12 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .paragraph-s {
+    margin: 0px 0px 0px -7px;
+  }
+}
+
 .btn,
 .filter-checkbox__label::after,
 .filter-checkbox__label,

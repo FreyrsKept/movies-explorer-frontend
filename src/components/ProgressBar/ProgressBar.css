@@ -5,8 +5,15 @@
   background-color: #303030;
 }
 
+@media screen and (max-width: 320px) {
+  .progress-bar {
+    width: 95%;
+  }
+}
+
 .progress-bar>* {
   padding: 9px 0;
+  margin: 0px 7px 0px 3px;
   font-family: "Inter-Regular", "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-size: 1.4rem;
@@ -25,6 +32,12 @@
   }
 }
 
+@media screen and (max-width: 320px) {
+  .progress-bar>* {
+    margin: 0px 0px 0px -8px;
+  }
+}
+
 .progress-bar__stage-1 {
   flex-grow: 1;
   color: #000;
@@ -37,7 +50,7 @@
 
 @media screen and (max-width: 1024px) {
   .progress-bar__stage-2 {
-    flex-grow: 5.8;
+    flex-grow: 5.4;
   }
 }
 

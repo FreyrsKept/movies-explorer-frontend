@@ -26,6 +26,14 @@
   column-gap: 10px;
 }
 
+@media screen and (max-width: 320px) {
+  .nav-tab__list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 6px;
+  }
+}
+
 .nav-tab__link {
   width: 96px;
   height: 36px;

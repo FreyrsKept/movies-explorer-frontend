@@ -1,8 +1,9 @@
 .portfolio__wrapper {
   display: flex;
   flex-direction: column;
+  list-style-type: none;
   row-gap: 20px;
-  padding: 50px 0 125px;
+  padding: 0px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -16,6 +17,14 @@
   .portfolio__wrapper {
     padding-top: 40px;
     padding-bottom: 68px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .portfolio__wrapper {
+    padding-top: 30px;
+    padding-bottom: 6px;
+    margin: 10px 6px 2px -12px;
   }
 }
 
@@ -74,6 +83,14 @@
   .portfolio__heading {
     font-size: calc(1.4rem + 6.8 * (100vw - 320px) / 767);
     line-height: 1.4285714286;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .portfolio__heading {
+    font-size: calc(1.4rem + 6.8 * (100vw - 320px) / 767);
+    line-height: 1.4285714286;
+    margin: 0px 0px 0px -12px;
   }
 }
 

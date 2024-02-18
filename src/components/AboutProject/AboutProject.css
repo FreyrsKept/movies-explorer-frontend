@@ -14,8 +14,21 @@
   margin-bottom: -10px;
 }
 
+@media screen and (max-width: 768px) {
+  .about-project__web-development {
+    padding-bottom: 10px;
+  }
+}
+
+
 .about-project__web-development> :first-child {
   flex-grow: 1;
+}
+
+@media screen and (max-width: 320px) {
+  .about-project__web-development> :first-child {
+    flex-grow: 0.5;
+  }
 }
 
 .about-project__web-development> :nth-child(2) {

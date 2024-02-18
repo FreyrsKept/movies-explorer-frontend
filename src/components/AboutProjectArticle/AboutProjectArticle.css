@@ -24,6 +24,14 @@
   }
 }
 
+/* @media screen and (max-width: 320px) {
+  .diploma-work__heading {
+    font-size: calc(1.8rem + 3.4 * (100vw - 320px) / 767);
+    line-height: 1.2222222222;
+    letter-spacing: -0.07rem;
+  }
+} */
+
 @media screen and (max-width: 1024px) {
   .diploma-work {
     row-gap: 22px;
@@ -35,6 +43,13 @@
 @media screen and (max-width: 480px) {
   .diploma-work {
     row-gap: 16px;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .diploma-work {
+    row-gap: 13px;
     margin: 0;
   }
 }

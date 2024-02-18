@@ -5,8 +5,8 @@
 
 @media screen and (max-width: 1279px) {
   .wrapper {
-    margin-right: calc(50px + 34 * (100vw - 768px) / 1279);
-    margin-left: calc(50px + 34 * (100vw - 768px) / 1279);
+    margin-right: calc(43px + 34 * (100vw - 768px) / 1279);
+    margin-left: calc(49px + 34 * (100vw - 768px) / 1279);
   }
 }
 
@@ -16,9 +16,17 @@
     margin-left: calc(18px + 54.4 * (100vw - 320px) / 767);
   }
 
+
   .wrapper_indent_s {
     margin-right: calc(14px + 61.2 * (100vw - 320px) / 767);
     margin-left: calc(14px + 61.2 * (100vw - 320px) / 767);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .wrapper {
+    margin-right: calc(0px + 54.4 * (100vw - 320px) / 767);
+    margin-left: calc(18px + 54.4 * (100vw - 320px) / 767);
   }
 }
 
@@ -28,7 +36,7 @@
 
 @media screen and (max-width: 1279px) {
   .section-wrapper {
-    padding-top: calc(90px + 34 * (100vw - 768px) / 1279);
+    padding-top: calc(88px + 34 * (100vw - 768px) / 1279);
   }
 }
 

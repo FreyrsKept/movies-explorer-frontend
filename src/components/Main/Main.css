@@ -16,6 +16,7 @@ main {
   .section-heading-main {
     font-size: calc(3rem + 34 * (100vw - 320px) / 767);
     font-size: 5rem;
+    padding: 0px 8px 0px 0px;
   }
 }
 
@@ -24,5 +25,14 @@ main {
     line-height: 1.2333333333;
     letter-spacing: -0.1rem;
     font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .section-heading-main {
+    margin: 0px 20px 0px 0px;
+    line-height: 1.2333333333;
+    font-size: 30px;
+    padding: 0;
   }
 }
