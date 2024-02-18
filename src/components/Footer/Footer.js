@@ -12,7 +12,7 @@ function Footer() {
         </span>
         <div className="footer__links">
           <a
-            className="link footer__link"
+            className="footer__link"
             href="https://practicum.yandex.ru/"
             rel="noreferrer"
             target="_blank"
@@ -20,7 +20,7 @@ function Footer() {
             Яндекс.Практикум
           </a>
           <a
-            className="link footer__link"
+            className="footer__link"
             href="https://github.com/freyrsKept"
             rel="noreferrer"
             target="_blank"

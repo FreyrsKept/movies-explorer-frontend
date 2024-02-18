@@ -75,8 +75,14 @@
 }
 
 .about-me__paragraph {
-  padding: 26px 0 99px;
-  line-height: 1.5714285714;
+  padding: 22px 0 99px;
+  margin: 2px 0px 0px 0px;
+  font-family: "Inter-Regular", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: 0.06rem;
 }
 
 @media screen and (max-width: 1024px) {

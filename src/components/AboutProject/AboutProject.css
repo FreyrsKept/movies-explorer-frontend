@@ -11,6 +11,7 @@
 .about-project__web-development {
   display: flex;
   margin-top: 14px;
+  margin-bottom: -10px;
 }
 
 .about-project__web-development> :first-child {

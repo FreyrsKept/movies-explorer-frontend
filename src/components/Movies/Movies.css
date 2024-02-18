@@ -132,21 +132,21 @@
 
 .movies-card__btn-favourite {
   display: none;
-  background-image: url(../../images/save3d.png);
+  /* background-image: url(../../images/save3d.png); */
   grid-area: btn-favourite;
   justify-self: end;
-  width: 71px;
+  /* width: 71px; */
   height: 21px;
   margin-top: 20px;
   margin-right: 14px;
   background-color: #313131;
-  border-radius: 0.6rem;
+  border-radius: 50%;
 }
 
-.movies-card__btn-favourite:active {
+/* .movies-card__btn-favourite:active {
   background-image: url(../../images/save.png);
   display: block;
-}
+} */
 
 .movies-card__btn-favourite_active {
   background-image: url(../../images/save.png);

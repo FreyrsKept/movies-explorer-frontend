@@ -16,7 +16,7 @@ function MoviesCard({ card: { nameRU, duration, image }, icon }) {
   const handleToggle = () => {
     setActive(!isActive);
   };
-
+  // let isFavouriteCard = false;
 
   return (
     <article className="movies-card">
@@ -30,9 +30,11 @@ function MoviesCard({ card: { nameRU, duration, image }, icon }) {
         <span className="movies-card__duration">{countTime(duration)}</span>
       </div>
       <button
+        // className={`btn movies-card__btn-favourite${(isFavouriteCard && " movies-card__btn-favourite_active") || ""
+        //   }`}
         onClick={handleToggle}
-        id="movieSave"
-        className={`btn ${isActive ? "movies-card__btn-favourite" : "movies-card__btn-favourite_active"}`}
+        className={`btn ${isActive ? "movies-card__btn-favourite" :
+          "movies-card__btn-favourite_active"}`}
         type="button"
         aria-label="Добавление карточки с фильмом в избранные"
       >
