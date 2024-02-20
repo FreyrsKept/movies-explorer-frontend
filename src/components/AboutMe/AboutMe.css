@@ -59,8 +59,8 @@
 
 @media screen and (max-width: 320px) {
   .about-me__heading {
-    margin: 10px 0px 6px -10px;
-    font-size: 3rem;
+    margin: 7px 0px 6px -7px;
+    font-size: 3.1rem;
   }
 }
 
@@ -96,7 +96,7 @@
   .about-me__subheading {
     font-size: 1.1rem;
     line-height: 1.5;
-    margin: 8px 0px 0px -12px;
+    margin: 8px 0px 0px -8px;
     padding: 14px 0px 0px 0px;
   }
 }
@@ -134,8 +134,8 @@
 
 @media screen and (max-width: 320px) {
   .about-me__paragraph {
-    padding: 18px 4px 82px 0px;
-    margin: 2px 0px 0px -12px;
+    padding: 18px 2px 75px 0px;
+    margin: 3px 0px -2px -9px;
     padding-bottom: 42px;
     line-height: 1.45;
     letter-spacing: 0.0rem;

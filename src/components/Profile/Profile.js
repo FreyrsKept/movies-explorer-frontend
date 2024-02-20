@@ -1,6 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { ROUTE_SIGNIN } from "../../utils/constants"
 
 function Profile() {
+
+  const navigate = useNavigate();
+
+  function signOut() {
+    navigate(ROUTE_SIGNIN, { replace: true })
+  }
+
   return (
     <div className="profile">
       <div className="profile__wrapper">
@@ -45,6 +54,7 @@ function Profile() {
           </button>
         </form>
         <button
+          onClick={() => signOut}
           className="btn btn-profile-exit"
           type="button"
           aria-label="Выход из личного кабинета пользователя"

@@ -4,7 +4,7 @@
   align-items: center;
   -moz-column-gap: 44px;
   column-gap: 44px;
-  padding: 9px 0px 16px 6px;
+  padding: 9px 5px 16px 6px;
 }
 
 @media screen and (max-width: 1279px) {
@@ -14,7 +14,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .header__wrapper {
     margin-right: calc(14px + 27.2 * (100vw - 320px) / 767);
     margin-left: calc(14px + 27.2 * (100vw - 320px) / 767);
@@ -41,5 +41,12 @@
   .header__auth {
     -moz-column-gap: 14px;
     column-gap: 14px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header__auth {
+    margin: 0px 1px 5px 0px;
+    padding: 2px 0px 0px 0px;
   }
 }

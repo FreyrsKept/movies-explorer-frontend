@@ -81,7 +81,7 @@ html {
   .layout-2-column {
     flex-direction: column;
     row-gap: 60px;
-    margin: 59px 0px 63px -9px;
+    margin: 62px 0px 63px -9px;
   }
 }
 
@@ -94,6 +94,7 @@ html {
   line-height: 1.2272727273;
   font-weight: 400;
   letter-spacing: -0.1rem;
+  border-bottom: 1px solid rgba(218, 218, 218, 1);
 }
 
 @media screen and (max-width: 768px) {
@@ -113,6 +114,12 @@ html {
     letter-spacing: -0.07rem;
     padding-bottom: 30px;
     margin: 11px 4px 0px -8px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .section-heading {
+    padding-bottom: 27px;
   }
 }
 
@@ -349,7 +356,7 @@ html {
 
 @media screen and (max-width: 320px) {
   .avatar {
-    margin: -10px 0px 0px -20px;
+    margin: -5px -20px 0px -20px;
     order: 1;
     width: 292px;
     height: 352px;

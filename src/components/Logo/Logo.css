@@ -14,3 +14,9 @@
     margin-left: -13px;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .logo {
+    margin-left: -18px;
+  }
+}

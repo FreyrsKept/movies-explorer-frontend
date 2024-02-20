@@ -4,7 +4,7 @@ import StudentAvatar from "../../images/StudentAvatar.jpg";
 function AboutMe() {
   return (
     <section className="about-me" id="student">
-      <div className="wrapper section-wrapper section-wrapper_">
+      <div className="wrapper section-wrapper section-wrapper_indent_s">
         <h2 className="about-heading section-heading">Студент</h2>
         <div className="about-me__wrapper">
           <div className="about-me__biography">
