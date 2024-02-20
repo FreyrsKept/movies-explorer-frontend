@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { IconSave } from "../MoviesCard/IconSave"
+import { IconCross } from "../MoviesCard/IconCross"
+import { useLocation } from "react-router-dom";
 
-function MoviesCard({ card: { nameRU, duration, image }, icon }) {
+function MoviesCard({ card: { nameRU, duration, image } }) {
   function countTime(duration) {
     const time = duration / 60;
     const hours = Math.floor(time);
@@ -11,6 +14,8 @@ function MoviesCard({ card: { nameRU, duration, image }, icon }) {
 
     return hours ? `${hours}ч` : `${minutes}м`;
   }
+
+  const { pathname } = useLocation();
 
   const [isActive, setActive] = useState('false');
   const handleToggle = () => {
@@ -38,7 +43,8 @@ function MoviesCard({ card: { nameRU, duration, image }, icon }) {
         type="button"
         aria-label="Добавление карточки с фильмом в избранные"
       >
-        {icon}
+        {pathname === "/movies" && isActive && <IconSave />}
+        {pathname === "/saved-movies" && <IconCross />}
       </button>
     </article>
   );

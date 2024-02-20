@@ -35,7 +35,7 @@ function Navigation() {
   return (
     <div className="layout-nav">
       <nav className="nav">
-        <ul className="list nav__list">
+        <ul className="nav__list">
           {isMobileWidth && createNavLink("/", "Главная")}
           {links.map(({ path, label }) => createNavLink(path, label))}
         </ul>
