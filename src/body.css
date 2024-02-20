@@ -320,6 +320,12 @@ html {
   content: url(../src/images/find.png);
 }
 
+@media screen and (max-width: 768px) {
+  .btn-search {
+    margin: 9px -14px 0px 0px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .btn-search {
     bottom: 6px;

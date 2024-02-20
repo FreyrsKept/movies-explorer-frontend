@@ -19,4 +19,5 @@
 
 .modal-window_bg-color_dark {
   background-color: rgba(0, 0, 0, 0.3);
+  margin: 0px 0px 0px -8px;
 }

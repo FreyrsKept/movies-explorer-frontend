@@ -15,6 +15,13 @@
   }
 }
 
+@media screen and (max-width: 320px) {
+  .search {
+    padding-top: 75px;
+    padding-bottom: 4px;
+  }
+}
+
 @media screen and (max-width: 1279px) {
   .search__wrapper {
     margin-right: calc(30px + 68 * (100vw - 768px) / 1279);
@@ -33,6 +40,14 @@
   width: 99%;
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 320px) {
+  .search-film {
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .search-film:focus-within {
@@ -67,5 +82,21 @@
   .search-film__input {
     font-size: 1.8rem;
     line-height: 1.2222222222;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-film__input {
+    margin: 7px 0px 0px -25px;
+    padding-left: 32px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search-film__input {
+    font-size: 1.3rem;
+    line-height: 1.2222222222;
+    margin: 8px 9px 0px -10px;
+    padding-left: 12px;
   }
 }

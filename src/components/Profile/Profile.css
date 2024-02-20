@@ -132,6 +132,12 @@
   background-color: transparent;
 }
 
+@media screen and (max-width: 768px) {
+  .link-profile {
+    padding: 0px 260% 0px 0px;
+  }
+}
+
 .link-profile::before {
   content: url(../../images/profile.png);
   position: absolute;

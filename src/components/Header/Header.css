@@ -21,6 +21,12 @@
   }
 }
 
+@media screen and (max-width: 320px) {
+  .header__wrapper {
+    padding: 14px 5px 16px 6px;
+  }
+}
+
 .header__auth {
   display: flex;
   align-items: center;
