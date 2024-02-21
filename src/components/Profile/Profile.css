@@ -86,6 +86,10 @@
   width: inherit;
 }
 
+/* .profile__input-wrapper:focus {
+  outline: 2px solid #4285f4;
+} */
+
 .profile__input-wrapper:first-child {
   padding-bottom: 16px;
   border-bottom: 1px solid #424242;

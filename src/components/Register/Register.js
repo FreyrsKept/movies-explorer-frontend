@@ -20,6 +20,7 @@ function Register() {
         minLength={"2"}
         maxLength={"30"}
         autoComplete={"on"}
+        placeholder="Ваше имя"
       />
       <Input
         label={"E-mail"}
@@ -27,6 +28,7 @@ function Register() {
         id={"email"}
         type={"email"}
         autoComplete={"on"}
+        placeholder="Ваш email"
       />
       <Input
         htmlFor={"password"}
@@ -35,6 +37,7 @@ function Register() {
         type={"password"}
         minLength={"10"}
         autoComplete={"current-password"}
+        placeholder="Ваш пароль"
       />
       <p className="entry__paragraph">
         Уже зарегистрированы?&nbsp;
