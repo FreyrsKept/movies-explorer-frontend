@@ -18,12 +18,17 @@
   .header__wrapper {
     margin-right: calc(14px + 27.2 * (100vw - 320px) / 767);
     margin-left: calc(14px + 27.2 * (100vw - 320px) / 767);
+    left: -28px;
+    width: 91.3%;
+    padding: 9px 0px 17px 0px;
+    position: relative;
   }
 }
 
 @media screen and (max-width: 320px) {
   .header__wrapper {
-    padding: 14px 5px 16px 6px;
+    padding: 9px 0px 14px 16px;
+    width: 96%;
   }
 }
 

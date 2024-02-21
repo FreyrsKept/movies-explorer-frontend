@@ -282,6 +282,17 @@ html {
   border-bottom: 1px solid #424242;
 }
 
+@media screen and (max-width: 320px) {
+  .input {
+    width: 94%;
+    padding: 0px 0px 0px 15px;
+    height: 44px;
+    margin: 11px 0px 0px 0px;
+    margin-bottom: 20px;
+    background: rgba(47, 47, 47, 1);
+  }
+}
+
 .input:focus {
   border-bottom-color: #4285f4;
 }

@@ -3,7 +3,7 @@
   height: 38px;
 }
 
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   .logo {
     margin-left: -28px;
   }
@@ -19,4 +19,4 @@
   .logo {
     margin-left: -18px;
   }
-}
+} */

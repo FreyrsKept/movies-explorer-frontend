@@ -138,6 +138,12 @@
   }
 }
 
+@media screen and (max-width: 320px) {
+  .link-profile {
+    padding: 0px 0px 0px 0px;
+  }
+}
+
 .link-profile::before {
   content: url(../../images/profile.png);
   position: absolute;

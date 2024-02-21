@@ -26,7 +26,14 @@
   .entry__wrapper {
     align-items: center;
     max-width: 260px;
-    padding-top: 18%;
+    padding-top: 50px;
+    padding-bottom: 18%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .entry__wrapper {
+    padding-top: 50px;
     padding-bottom: 18%;
   }
 }
@@ -110,4 +117,11 @@
   color: #fff;
   background-color: #4285f4;
   border-radius: 0.3rem;
+}
+
+@media screen and (max-width: 320px) {
+  .btn-entry {
+    margin: -57px 0px 0px 0px;
+    font-size: 1.2rem;
+  }
 }
