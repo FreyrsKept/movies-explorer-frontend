@@ -9,13 +9,7 @@
 
 @media screen and (max-width: 768px) {
   .movies-gallery {
-    margin: 92px 0px -27px 0px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .movies-gallery {
-    margin: 105px 0px -27px 0px;
+    margin: 94px 0px -27px 0px;
   }
 }
 
