@@ -57,6 +57,13 @@
   }
 }
 
+@media screen and (max-width: 320px) {
+  .hamburger_clicked {
+    margin-right: 0px;
+    margin-bottom: 18px;
+  }
+}
+
 .hamburger_clicked>.hamburger__line:nth-child(1) {
   transform: translateY(9px) rotate(-45deg);
 }
@@ -104,6 +111,13 @@
 @media screen and (max-width: 480px) {
   .hamburger-menu__wrapper {
     padding: 145px 3% 47px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .hamburger-menu__wrapper {
+    padding: 145px 3% 47px;
+    margin: 0px 200px 0px -166px;
   }
 }
 
