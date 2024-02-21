@@ -17,7 +17,7 @@
 
 @media screen and (max-width: 320px) {
   .search {
-    padding-top: 78px;
+    padding-top: 75px;
     padding-bottom: 4px;
   }
 }
@@ -92,7 +92,7 @@
 
 @media screen and (max-width: 768px) {
   .search-film__input {
-    margin: 7px 0px 0px -25px;
+    margin: 0px 0px 0px -25px;
     padding-left: 32px;
   }
 }

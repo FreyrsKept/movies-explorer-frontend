@@ -3,19 +3,20 @@
   align-items: center;
   -moz-column-gap: 14px;
   column-gap: 14px;
-  margin: -5px 0px 0px 43%;
+  position: absolute;
+  margin: 43px 0px 0px 489px;
 }
 
 @media screen and (max-width: 768px) {
   .filter-checkbox {
     justify-content: flex-start;
-    margin: 10px 0px 0px 37%;
+    margin: 57px 0px 0px 32%;
   }
 }
 
 @media screen and (max-width: 320px) {
   .filter-checkbox {
-    margin: -1px 119px 7px 37%;
+    margin: 58px 122px 8px 18%;
   }
 }
 
@@ -45,7 +46,7 @@
 
 @media screen and (max-width: 320px) {
   .filter-checkbox__wrapper {
-    margin-top: 71px;
+    margin-top: 68px;
   }
 }
 

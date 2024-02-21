@@ -7,6 +7,7 @@ function FilterCheckbox() {
       <div className="filter-checkbox__wrapper">
         <input
           className="filter-checkbox__input"
+          // placeholder="Фильтр короткомтражных фильмов"
           id="filter-films"
           type="checkbox"
         />

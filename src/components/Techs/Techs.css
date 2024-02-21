@@ -2,6 +2,12 @@
   background-color: #272727;
 }
 
+@media screen and (max-width: 768px) {
+  .techs {
+    margin: 0px auto 3px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .techs {
     background-color: inherit;
@@ -26,7 +32,7 @@
 
 @media screen and (max-width: 768px) {
   .techs__wrapper {
-    padding-top: calc(47px + 66.3 * (100vw - 320px) / 767);
+    padding-top: calc(53px + 66.3 * (100vw - 320px) / 767);
   }
 }
 
@@ -107,6 +113,7 @@
 @media screen and (max-width: 480px) {
   .techs__paragraph {
     padding-bottom: 30px;
+    max-width: 320px;
   }
 }
 

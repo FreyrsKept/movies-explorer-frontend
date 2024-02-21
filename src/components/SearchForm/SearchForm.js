@@ -18,8 +18,8 @@ function SearchForm() {
             type="submit"
             aria-label="Поиск фильмов"
           />
+          <FilterCheckbox />
         </form>
-        <FilterCheckbox />
       </div>
     </section>
   );

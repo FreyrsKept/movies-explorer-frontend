@@ -15,6 +15,12 @@
   padding: 5.5% 0;
 }
 
+@media screen and (max-width: 1280px) {
+  .entry__wrapper {
+    margin: -9px auto;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .entry__wrapper {
     padding-top: 30%;
@@ -33,7 +39,7 @@
 
 @media screen and (max-width: 320px) {
   .entry__wrapper {
-    padding-top: 50px;
+    padding-top: 58px;
     padding-bottom: 18%;
   }
 }
@@ -52,7 +58,7 @@
 
 .entry__fieldset {
   padding: 0;
-  margin: 0 0 125px;
+  margin: 0 0 72px;
   border: none;
 }
 
@@ -63,12 +69,18 @@
 }
 
 .entry__fieldset_margin_big {
-  margin-bottom: 194px;
+  margin-bottom: 159px;
 }
 
 @media screen and (max-width: 480px) {
   .entry__fieldset_margin_big {
     margin-bottom: 285px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .entry__fieldset_margin_big {
+    margin-bottom: 305px;
   }
 }
 
@@ -103,6 +115,13 @@
     line-height: 1.25;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .entry__paragraph {
+    margin: 13px 0 0;
+  }
+}
+
 
 .btn-entry {
   width: 100%;

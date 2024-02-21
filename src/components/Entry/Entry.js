@@ -16,28 +16,32 @@ function Entry({ children, heading, name, btn, btnAriaLabel }) {
   // }
 
   return (
-    <div className="entry">
-      <div className="entry__wrapper">
-        <Logo />
-        <h1 className="entry__heading">{heading}</h1>
-        <form className="entry__form" name={name}>
-          <fieldset
-            className={`entry__fieldset${(isLoginHref && " entry__fieldset_margin_big") || ""
-              }`}
-          >
-            {inputs}
-          </fieldset>
-          <button
-            className="btn btn-entry"
-            type="submit"
-            aria-label={btnAriaLabel}
-          >
-            {btn}
-          </button>
-        </form>
-        {link}
-      </div>
-    </div>
+    <main>
+      <section>
+        <div className="entry">
+          <div className="entry__wrapper">
+            <Logo />
+            <h1 className="entry__heading">{heading}</h1>
+            <form className="entry__form" name={name}>
+              <fieldset
+                className={`entry__fieldset${(isLoginHref && " entry__fieldset_margin_big") || ""
+                  }`}
+              >
+                {inputs}
+              </fieldset>
+              <button
+                className="btn btn-entry"
+                type="submit"
+                aria-label={btnAriaLabel}
+              >
+                {btn}
+              </button>
+            </form>
+            {link}
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
 

@@ -18,6 +18,7 @@ function Login() {
         id={"email"}
         type={"email"}
         autoComplete={"on"}
+        placeholder="Ваш email"
       />
       <Input
         htmlFor={"password"}
@@ -26,6 +27,7 @@ function Login() {
         type={"password"}
         minLength={"10"}
         autoComplete={"current-password"}
+        placeholder="Ваш пароль"
       />
       <p className="entry__paragraph">
         Ещё не зарегистрированы?&nbsp;
