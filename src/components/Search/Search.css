@@ -1,0 +1,107 @@
+.search {
+  padding-top: 83px;
+  padding-bottom: 6px;
+}
+
+@media screen and (max-width: 1024px) {
+  .search {
+    padding-top: 77px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .search {
+    padding-top: 87px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search {
+    padding-top: 75px;
+    padding-bottom: 4px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .search__wrapper {
+    margin-right: calc(30px + 68 * (100vw - 768px) / 1279);
+    margin-left: calc(30px + 68 * (100vw - 768px) / 1279);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search__wrapper {
+    margin-right: calc(14px + 27.2 * (100vw - 320px) / 767);
+    margin-left: calc(14px + 27.2 * (100vw - 320px) / 767);
+  }
+}
+
+.search-film {
+  width: 99%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 320px) {
+  .search-film {
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.search-film:focus-within {
+  border-bottom-color: #4285f4;
+}
+
+.search-film__input {
+  width: 94.4%;
+  height: 43px;
+  padding-bottom: 4px;
+  font-family: "Inter-Medium", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 1.2142857143;
+  font-weight: 500;
+  letter-spacing: 0;
+  background: rgba(47, 47, 47, 1);
+  text-align: left;
+  padding-left: 20px;
+  border-radius: 7px;
+  color: #fff;
+}
+
+.search-film__input:focus {
+  outline: 2px solid #4285f4;
+}
+
+.search-film__input::-moz-placeholder {
+  color: #8b8b8b;
+}
+
+.search-film__input::placeholder {
+  color: #8b8b8b;
+}
+
+@media screen and (max-width: 480px) {
+  .search-film__input {
+    font-size: 1.8rem;
+    line-height: 1.2222222222;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-film__input {
+    margin: 0px 0px 0px -25px;
+    padding-left: 32px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search-film__input {
+    font-size: 1.3rem;
+    line-height: 1.2222222222;
+    margin: 8px 9px 0px -10px;
+    padding-left: 12px;
+  }
+}

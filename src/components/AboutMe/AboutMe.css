@@ -1,0 +1,151 @@
+.about-me__wrapper {
+  display: grid;
+  grid-template-columns: 52.6% max-content;
+  justify-content: space-between;
+  padding: 66px 0 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-me__wrapper {
+    padding-bottom: 91px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-me__wrapper {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding-bottom: 69px;
+  }
+}
+
+.about-me__biography {
+  max-width: 600px;
+}
+
+@media screen and (max-width: 767px) {
+  .about-me__biography {
+    order: 2;
+  }
+}
+
+.about-me__heading {
+  margin: 0px;
+  font-family: "Inter-Regular", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 5rem;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: -0.2rem;
+}
+
+@media screen and (max-width: 1279px) {
+  .about-me__heading {
+    font-size: calc(4rem + 23.8 * (100vw - 768px) / 1279);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about-me__heading {
+    line-height: 1;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-me__heading {
+    padding-top: 35px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .about-me__heading {
+    margin: 7px 0px 6px -7px;
+    font-size: 3.1rem;
+  }
+}
+
+.about-me__subheading {
+  margin: 0;
+  padding-top: 18px;
+  font-family: "Inter-Medium", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 1.1111111111;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-me__subheading {
+    padding-top: 14px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-me__subheading {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0px 3px 3px -7px;
+    padding: 14px 0px 0px 0px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .about-me__subheading {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 8px 0px 0px -8px;
+    padding: 14px 0px 0px 0px;
+  }
+}
+
+.about-me__paragraph {
+  padding: 22px 0 99px;
+  margin: 2px 0px 0px 0px;
+  font-family: "Inter-Regular", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: 0.06rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-me__paragraph {
+    padding: 19px 0px 82px;
+    margin: 2px 0px 0px -7px;
+    font-family: "Inter-Regular", "Arial", "Helvetica", sans-serif;
+    font-style: normal;
+    font-size: 11px;
+    line-height: 1.7;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-me__paragraph {
+    padding-bottom: 42px;
+    line-height: 1.4545454545;
+    width: 368px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .about-me__paragraph {
+    width: 315px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .about-me__paragraph {
+    padding: 18px 2px 75px 0px;
+    margin: 3px 0px -2px -9px;
+    padding-bottom: 42px;
+    line-height: 1.45;
+    letter-spacing: 0.0rem;
+    width: 292px;
+  }
+}

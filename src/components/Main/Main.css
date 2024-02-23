@@ -1,0 +1,38 @@
+main {
+  display: block;
+}
+
+.section-heading-main {
+  margin: 0;
+  font-family: "Inter-Regular", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-size: 5rem;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: -0.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .section-heading-main {
+    font-size: calc(3rem + 34 * (100vw - 320px) / 767);
+    font-size: 5rem;
+    padding: 0px 8px 0px 0px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section-heading-main {
+    line-height: 1.2333333333;
+    letter-spacing: -0.1rem;
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .section-heading-main {
+    margin: 3px 20px 0px 0px;
+    line-height: 1.2333333333;
+    font-size: 30px;
+    padding: 0;
+  }
+}

@@ -1,0 +1,131 @@
+.techs {
+  background-color: #272727;
+}
+
+@media screen and (max-width: 768px) {
+  .techs {
+    margin: 0px auto 3px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .techs {
+    background-color: inherit;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .techs {
+    margin: 5px 0px -20px 0px;
+  }
+}
+
+.techs__wrapper {
+  padding-top: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  .techs__wrapper {
+    padding-top: 90px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .techs__wrapper {
+    padding-top: calc(53px + 66.3 * (100vw - 320px) / 767);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .techs__wrapper {
+    padding-top: calc(40px + 66.3 * (100vw - 320px) / 767);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .techs__heading {
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+  }
+}
+
+.techs__list {
+  padding: 90px 0 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  .techs__list {
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .techs__list {
+    padding-top: 59px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .techs__heading {
+    border-bottom-color: #000;
+  }
+}
+
+.techs__paragraph {
+  margin: 2px 0px 0px 0px;
+  font-family: "Inter-Regular", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  max-width: 500px;
+  font-size: 12px;
+  padding: 22px 0 100px;
+  text-align: center;
+  width: 460px;
+}
+
+@media screen and (max-width: 1024px) {
+  .techs__paragraph {
+    padding-top: 22px;
+    padding-bottom: 83px;
+    margin: 20px 0px -15px 0px;
+    font-family: "Inter-Regular", "Arial", "Helvetica", sans-serif;
+    font-style: normal;
+    line-height: 1.7;
+    font-weight: 400;
+    letter-spacing: 0.07rem;
+    max-width: 420px;
+    font-size: 10px;
+    padding: 0px 0 100px;
+    text-align: center;
+    width: 460px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .techs__paragraph {
+    font-size: 1.1rem;
+    line-height: 1.4545454545;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .techs__paragraph {
+    padding-bottom: 30px;
+    max-width: 320px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .techs__paragraph {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.04em;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 68px;
+    margin: 23px 20px 25px 0px;
+  }
+}
