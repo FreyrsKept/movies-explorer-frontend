@@ -5,7 +5,7 @@ import { IconCross } from "../MoviesCard/IconCross"
 import { useLocation } from "react-router-dom";
 
 function MoviesCard({ movie, icon, onMovieSelect }) {
-  const { nameRU, duration, trailerLink, image, selected } = movie;
+  const { nameRU, duration, trailerLink, image } = movie;
 
   function countTime(duration) {
     const time = duration / 60;
@@ -51,12 +51,16 @@ function MoviesCard({ movie, icon, onMovieSelect }) {
       <button
         // className={`btn movies-card__btn-favourite${(isFavouriteCard && " movies-card__btn-favourite_active") || ""
         //   }`}
-        onClick={(evt) => onMovieSelect(evt, movie)}
+        onClick={(evt) => {
+          onMovieSelect(evt, movie)
+          handleToggle()
+        }}
         className={`btn ${isActive ? "movies-card__btn-favourite" :
           "movies-card__btn-favourite_active"}`}
         type="button"
         aria-label="Добавление карточки с фильмом в избранные"
       >
+        {handleToggle}
         {pathname === "/movies" && isActive && <IconSave />}
         {pathname === "/saved-movies" && <IconCross />}
       </button>

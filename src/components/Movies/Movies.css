@@ -215,6 +215,7 @@
 } */
 
 .movies-card__btn-favourite_active {
+  z-index: 0;
   background-image: url(../../images/save.png);
   grid-area: btn-favourite;
   justify-self: end;
