@@ -196,6 +196,7 @@
 }
 
 .movies-card__btn-favourite {
+  z-index: 0;
   display: none;
   /* background-image: url(../../images/save3d.png); */
   grid-area: btn-favourite;
@@ -230,18 +231,21 @@
   -o-object-fit: cover;
   object-fit: cover;
   width: 364px;
+  height: 201px;
   border-radius: 5%;
 }
 
 @media screen and (max-width: 768px) {
   .movies-card__photo {
     width: 339px;
+    height: 190px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .movies-card__photo {
     width: 300px;
+    height: 168px;
     padding: 0px 10px 0px 0px;
   }
 }

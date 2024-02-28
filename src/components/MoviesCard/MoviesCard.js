@@ -28,17 +28,20 @@ function MoviesCard({ movie, icon, onMovieSelect }) {
   return (
     <article className="movies-card">
       <a
-        className="link movies-card__link"
-        href={trailerLink}
-        rel="noreferrer"
-        target="_blank"
+        className='movies-cards__trailer-link link'
+        href={movie.trailerLink}
+        target='_blank'
+        rel='noreferrer'
       >
         <img
           className="movies-card__photo"
           src={
             (image?.url && `https://api.nomoreparties.co${image?.url}`) || image
           }
-          alt={`Карточка с фильмом, называющимся "${nameRU}"`}
+          alt={`Постер фильма "${nameRU}"`}
+          href={trailerLink}
+          rel="noreferrer"
+          target="_blank"
         />
       </a>
       <div className="movies-card__description">
@@ -48,7 +51,6 @@ function MoviesCard({ movie, icon, onMovieSelect }) {
       <button
         // className={`btn movies-card__btn-favourite${(isFavouriteCard && " movies-card__btn-favourite_active") || ""
         //   }`}
-        // onClick={handleToggle}
         onClick={(evt) => onMovieSelect(evt, movie)}
         className={`btn ${isActive ? "movies-card__btn-favourite" :
           "movies-card__btn-favourite_active"}`}

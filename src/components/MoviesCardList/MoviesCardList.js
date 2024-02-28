@@ -121,28 +121,26 @@ function MoviesCardList({
     return renderCards();
   }
 
-  function renderCards() {
-    return (
-      <section
-        className="movies-gallery"
-        aria-label="Галерея с карточками фильмов"
-      >
-        <div className="wrapper movies-gallery__wrapper">
-          {renderResults()}
-          {visibleCards < movies?.length && pathMovies && (
-            <button
-              className="movies-gallery__btn-more"
-              type="button"
-              aria-label="Отображение новых карточек с фильмами в галерее"
-              onClick={() => setMoreCards()}
-            >
-              Ещё
-            </button>
-          )}
-        </div>
-      </section>
-    );
-  }
+  return (
+    <section
+      className="movies-gallery"
+      aria-label="Галерея с карточками фильмов"
+    >
+      <div className="wrapper movies-gallery__wrapper">
+        {renderResults()}
+        {visibleCards < movies?.length && pathMovies && (
+          <button
+            className="movies-gallery__btn-more"
+            type="button"
+            aria-label="Отображение новых карточек с фильмами в галерее"
+            onClick={() => setMoreCards()}
+          >
+            Ещё
+          </button>
+        )}
+      </div>
+    </section>
+  );
 }
 
 MoviesCardList.propTypes = {
