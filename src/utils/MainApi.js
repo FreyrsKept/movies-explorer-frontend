@@ -1,13 +1,17 @@
 import {
   URL_BASE,
-  ROUTE_MAIN,
   ROUTE_SIGNUP,
   ROUTE_SIGNIN,
   ROUTE_MOVIES,
-  ROUTE_SAVEDMOVIES,
   ROUTE_CURRENTUSER,
-  ROUTE_ROOT,
 } from "./constants"
+
+const checkServerResponse = (res) => {
+  if (res.ok) {
+    return res.json();
+  }
+  return Promise.reject(res);
+};
 
 // Пользовательские запросы
 export function registerUser(email, password, name) {
@@ -17,10 +21,14 @@ export function registerUser(email, password, name) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ email, password, name }),
-  });
+  })
+    .then((res) => {
+      return res;
+    })
+    .then((res) => checkServerResponse(res));
 }
 
-export function authorizeUser(email, password) {
+export async function authorizeUser(email, password) {
   return fetch(`${URL_BASE}${ROUTE_SIGNIN}`, {
     method: "POST",
     headers: {
@@ -28,7 +36,7 @@ export function authorizeUser(email, password) {
     },
     body: JSON.stringify({ email, password }),
   });
-}
+};
 
 export function getUserInfo(token) {
   return fetch(`${URL_BASE}${ROUTE_CURRENTUSER}`, {

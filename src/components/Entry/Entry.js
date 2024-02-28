@@ -20,10 +20,6 @@ function Entry({
   const inputs = children.slice(0, -1);
   const link = children.slice(-1);
 
-  // function handleSubmit(evt) {
-  //   evt.preventDefault();
-  // }
-
   return (
     <main>
       <section>
@@ -57,7 +53,7 @@ function Entry({
                   className="btn btn-entry"
                   type="submit"
                   aria-label={btnAriaLabel}
-                  disabled={!isValid || onLoad}
+                // disabled={!isValid || onLoad}
                 >
                   {onLoad ? "Подождите..." : btn}
                 </button>

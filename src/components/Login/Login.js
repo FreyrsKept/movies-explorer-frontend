@@ -12,7 +12,6 @@ function Login({ onAuthorization, onLoad, error }) {
 
   function handleSubmit(evt) {
     evt.preventDefault();
-
     const { email, password } = values;
 
     onAuthorization({
@@ -33,9 +32,9 @@ function Login({ onAuthorization, onLoad, error }) {
     >
       <Input
         label={"E-mail"}
-        name={"email"}
         htmlFor={"email"}
         id={"email"}
+        name={"email"}
         type={"email"}
         autoComplete={"on"}
         placeholder="Ваш email"
@@ -49,8 +48,8 @@ function Login({ onAuthorization, onLoad, error }) {
         htmlFor={"password"}
         id={"password"}
         label={"Пароль"}
+        name={"password"}
         type={"password"}
-        minLength={"10"}
         autoComplete={"current-password"}
         placeholder="Ваш пароль"
         value={values?.password || ""}

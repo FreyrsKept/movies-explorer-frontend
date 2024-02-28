@@ -56,7 +56,8 @@ function Header({ isCurrentUserLoggedIn }) {
           <Link className="link" to={ROUTE_SIGNUP}>
             Регистрация
           </Link>
-          <Link className="link link_color_accent btn-auth" to={ROUTE_SIGNIN}>
+          <Link className="link link_color_accent btn-auth"
+            to={ROUTE_SIGNIN}>
             Войти
           </Link>
         </div>

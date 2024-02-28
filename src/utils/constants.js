@@ -13,11 +13,11 @@ export const ROUTE_CURRENTUSER = "/users/me"
 export const ROUTE_ROOT = "*"
 
 export const emailRegex =
-  "[A-z0-9!#$%&'*+-/=?^_`{|]{1,64}@[A-z0-9-.]{2,253}\\.[A-z]{2,63}";
+  "/^\S+@\S+\.\S+$/";
 export const passwordRegex =
-  "(?=.*[A-z])(?=.*\\d)(?=.*[!@#$%^&*])(?=.{8,}).*";
+  "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$";
 export const usernameRegex =
-  "[A-я-\\s]{2,30}";
+  "/[a-zA-Z0-9]/";
 export const shortFilmLenght = 40;
 // Размеры экрана
 export const LAPTOP_SCREEN_WIDTH = 1024;

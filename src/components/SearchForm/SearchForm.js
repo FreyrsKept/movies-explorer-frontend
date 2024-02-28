@@ -58,11 +58,11 @@ function SearchForm({
             onFilter={onFilter}
             isFilterCheckboxChecked={isFilterCheckboxChecked}
           />
-          <span
+          {/* <span
             className={`error${(!isSearchFormValid && " error_visible") || ""}`}
           >
             Нужно ввести ключевое слово
-          </span>
+          </span> */}
         </form>
       </div>
     </section>

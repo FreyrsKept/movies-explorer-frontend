@@ -257,7 +257,6 @@ export default function App() {
 
       if (res.ok) {
         setErrorMessages({ authorizationResponse: "" });
-
         const data = await res.json();
         const { token } = data;
         localStorage.setItem("jwt", token);
