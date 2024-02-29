@@ -15,9 +15,9 @@ export const ROUTE_ROOT = "*"
 export const emailRegex =
   "[A-z0-9!#$%&'*+-/=?^_`{|]{1,64}@[A-z0-9-.]{2,253}\\.[A-z]{2,63}";
 export const passwordRegex =
-  "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$";
+  "(?=.*[A-z])(?=.*\\d)(?=.*[!@#$%^&*])(?=.{8,}).*";
 export const usernameRegex =
-  "/[a-zA-Z0-9]/";
+  "[A-я-\\s]{2,30}";
 export const shortFilmLenght = 40;
 // Размеры экрана
 export const LAPTOP_SCREEN_WIDTH = 1270;
