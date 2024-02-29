@@ -13,7 +13,7 @@ export const ROUTE_CURRENTUSER = "/users/me"
 export const ROUTE_ROOT = "*"
 
 export const emailRegex =
-  "/^\S+@\S+\.\S+$/";
+  "[A-z0-9!#$%&'*+-/=?^_`{|]{1,64}@[A-z0-9-.]{2,253}\\.[A-z]{2,63}";
 export const passwordRegex =
   "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$";
 export const usernameRegex =
