@@ -20,7 +20,7 @@ export const usernameRegex =
   "/[a-zA-Z0-9]/";
 export const shortFilmLenght = 40;
 // Размеры экрана
-export const LAPTOP_SCREEN_WIDTH = 1024;
+export const LAPTOP_SCREEN_WIDTH = 1270;
 export const TABLET_SCREEN_WIDTH = 768;
 export const MOBILE_SCREEN_WIDTH = 480;
 
