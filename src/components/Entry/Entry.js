@@ -53,7 +53,7 @@ function Entry({
                   className="btn btn-entry"
                   type="submit"
                   aria-label={btnAriaLabel}
-                // disabled={!isValid || onLoad}
+                  disabled={!isValid || onLoad}
                 >
                   {onLoad ? "Подождите..." : btn}
                 </button>

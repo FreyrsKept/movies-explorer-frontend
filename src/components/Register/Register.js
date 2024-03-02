@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, Navigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import Entry from "../Entry/Entry.js";
 import Input from "../Input/Input.js";
@@ -11,8 +11,9 @@ import {
 } from "../../utils/constants.js";
 import { validation } from "../../utils/validation.js";
 
-function Register({ onRegistration, onLoad, error }) {
+function Register({ onRegistration, onLoad, error, isCurrentUserLoggedIn }) {
   const { values, errors, isValid, handleChange } = useFormWithValidation();
+  let location = useLocation();
 
   function handleSubmit(evt) {
     evt.preventDefault();
@@ -24,7 +25,12 @@ function Register({ onRegistration, onLoad, error }) {
       password,
       name: name.trim().replace(/\s+/g, " "),
     });
+
+    if (isCurrentUserLoggedIn) {
+      return <Navigate to='/movies' state={{ from: location }} replace />;
+    }
   }
+
   return (
     <Entry
       heading={"Добро пожаловать!"}

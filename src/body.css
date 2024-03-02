@@ -419,7 +419,14 @@ html {
 }
 
 .error {
-  font-family: Inter;
+  display: none;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.error_visible {
+  font-family: "Inter-Regular", "Arial", "Helvetica", sans-serif;
+  display: inline;
   font-size: 10px;
   font-weight: 400;
   line-height: 12px;
@@ -429,7 +436,7 @@ html {
 }
 
 .profile__wrapper-btn {
-  width: 410px;
+  width: 100px;
   height: 45px;
 }
 
@@ -445,4 +452,17 @@ html {
     width: 100px;
     height: 45px;
   }
+}
+
+.success_visible {
+  font-size: 1rem;
+  display: none;
+  letter-spacing: 0
+}
+
+.success {
+  font-family: "Inter-Regular", "Arial", "Helvetica", "sans-serif";
+  display: inline;
+  margin-bottom: 20px;
+  text-align: center;
 }

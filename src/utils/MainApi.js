@@ -14,18 +14,37 @@ const checkServerResponse = (res) => {
 };
 
 // Пользовательские запросы
-export function registerUser(email, password, name) {
-  return fetch(`${URL_BASE}${ROUTE_SIGNUP}`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ email, password, name }),
-  })
-    .then((res) => {
-      return res;
+// export async function registerUser(name, email, password) {
+//   return fetch(`${URL_BASE}${ROUTE_SIGNUP}`, {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({ name, email, password }),
+//   })
+//     .then((res) => {
+//       return res;
+//     })
+//     .then((res) => checkServerResponse(res));
+// }
+class MainApi {
+  constructor({ baseUrl, headers }) {
+    this._headers = headers;
+    this._baseUrl = baseUrl;
+  }
+  registerUser(name, email, password) {
+    return fetch(`${URL_BASE}${ROUTE_SIGNUP}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, password }),
     })
-    .then((res) => checkServerResponse(res));
+      .then((res) => {
+        return res;
+      })
+      .then((res) => checkServerResponse(res));
+  }
 }
 
 export async function authorizeUser(email, password) {
@@ -128,3 +147,8 @@ export function handleMovieServer(movie) {
     );
   }
 }
+
+export const mainApi = new MainApi({
+  baseUrl: "https://api.nomoreparties.co/beatfilm-movies",
+  headers: {},
+})
