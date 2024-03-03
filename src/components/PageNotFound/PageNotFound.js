@@ -7,9 +7,6 @@ import { ROUTE_MAIN, ROUTE_MOVIES } from "../../utils/constants";
 function PageNotFound({ isCurrentUserLoggedIn }) {
   const navigate = useNavigate();
 
-  function handleClick() {
-    navigate(-1);
-  }
   return (
     <main>
       <section>
@@ -19,10 +16,16 @@ function PageNotFound({ isCurrentUserLoggedIn }) {
               <h1 className="not-found__heading">404</h1>
               <p className="not-found__paragraph">Страница не найдена</p>
             </div>
-            <Link
+            {/* <Link
               to={isCurrentUserLoggedIn ? ROUTE_MAIN : ROUTE_MOVIES}
               className="link not-found__link"
               onClick={handleClick}>
+              Назад
+            </Link> */}
+            <Link
+              className="link not-found__link"
+              to={isCurrentUserLoggedIn ? ROUTE_MOVIES : ROUTE_MAIN}
+            >
               Назад
             </Link>
           </div>
