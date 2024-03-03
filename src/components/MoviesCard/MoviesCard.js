@@ -5,7 +5,7 @@ import { IconCross } from "../MoviesCard/IconCross"
 import { useLocation } from "react-router-dom";
 
 function MoviesCard({ movie, icon, onMovieSelect }) {
-  const { nameRU, duration, trailerLink, image } = movie;
+  const { nameRU, duration, trailerLink, image, selected } = movie;
 
   function countTime(duration) {
     const time = duration / 60;

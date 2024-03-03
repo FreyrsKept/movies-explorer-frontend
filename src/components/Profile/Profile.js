@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { CurrentUserContext } from "../../context/CurrentUserContext";
 import useFormWithValidation from "../../hooks/useFormWithValidation";
 import {
-  passwordRegex,
+  emailRegex,
   ROUTE_MAIN,
   usernameRegex,
 } from "../../utils/constants";
@@ -25,7 +25,7 @@ function Profile({
   setErrorMessages,
 }) {
   const [prevValues, setPrevValues] = useState({});
-
+  const [isDisable, setIsNotDisable] = useState(false); // блокировка кнопки "Сохранить"
   const navigate = useNavigate();
 
   const currentUser = useContext(CurrentUserContext);
@@ -41,6 +41,14 @@ function Profile({
     setSuccessMessages("");
     setErrorMessages({ updatingUserInfoResponse: "" });
   }, [navigate]);
+
+  useEffect(() => {
+    if (currentUser.name !== values.name || currentUser.email !== values.email) {
+      setIsNotDisable(true)
+    } else {
+      setIsNotDisable(false)
+    }
+  }, [currentUser.name, currentUser.email, values.name, values.email])
 
   function showSaveBtn({ target }) {
     setIsBtnSaveVisible(true);
@@ -129,7 +137,7 @@ function Profile({
                     value={values?.email || ""}
                     required
                     onChange={handleChange}
-                    pattern={passwordRegex}
+                    pattern={emailRegex}
                     disabled={isBtnSaveVisible ? false : true}
                   />
                   <span
@@ -160,15 +168,19 @@ function Profile({
 
                 {isBtnSaveVisible ? (
                   <button
-                    className="btn btn-entry btn-save"
+                    key="save"
+                    className={!isValid || !isDisable ? 'btn btn-entry_error' : 'btn btn-entry btn-save'}
                     type="submit"
+                    disabled={isValid && isDisable ? false : true}
+                    // className="btn btn-entry btn-save"
+                    // type="submit"
                     aria-label="Сохранение данных профиля"
-                    disabled={
-                      !isValid ||
-                      onLoad ||
-                      (prevValues.email === values.email &&
-                        prevValues.name === values.name)
-                    }
+                  // disabled={
+                  //   !isValid ||
+                  //   onLoad ||
+                  //   (prevValues.email === values.email &&
+                  //     prevValues.name === values.name)
+                  // }
                   >
                     {onLoad ? "Сохранение..." : "Сохранить"}
                   </button>
