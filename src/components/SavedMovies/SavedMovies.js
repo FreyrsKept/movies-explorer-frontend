@@ -24,7 +24,7 @@ function SavedMovies({
 
   return (
     <>
-      <main>
+      <main id="saved-movies">
         <SearchForm
           onSearch={onSearch}
           searchFormValue={searchFormValue}

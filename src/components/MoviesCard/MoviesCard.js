@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { IconSave } from "../MoviesCard/IconSave"
+// import { IconSave } from "../MoviesCard/IconSave"
 import { IconCross } from "../MoviesCard/IconCross"
 import { useLocation } from "react-router-dom";
 
@@ -55,13 +55,13 @@ function MoviesCard({ movie, icon, onMovieSelect }) {
           onMovieSelect(evt, movie)
           handleToggle()
         }}
-        className={`btn ${isActive ? "movies-card__btn-favourite" :
-          "movies-card__btn-favourite_active"}`}
+        className={`btn movies-card__btn-favourite${(selected && " btn movies-card__btn-favourite_active") || ""
+          }`}
         type="button"
         aria-label="Добавление карточки с фильмом в избранные"
       >
         {handleToggle}
-        {pathname === "/movies" && isActive && <IconSave />}
+        {/* {pathname === "/movies" && isActive && <IconSave />} */}
         {pathname === "/saved-movies" && <IconCross />}
       </button>
     </article>

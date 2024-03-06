@@ -198,15 +198,21 @@
 .movies-card__btn-favourite {
   z-index: 0;
   display: none;
-  /* background-image: url(../../images/save3d.png); */
+  /* mask-image: url(../../images/save3d.png); */
+  background-image: url(../../images/save3d.png);
   grid-area: btn-favourite;
   justify-self: end;
-  /* width: 71px; */
+  width: 71px;
   height: 21px;
   margin-top: 16px;
   margin-right: 18px;
   background-color: #313131;
-  border-radius: 50%;
+  border-radius: 10px;
+}
+
+#saved-movies .movies-card__btn-favourite {
+  background-image: none;
+  width: auto;
 }
 
 /* .movies-card__btn-favourite:active {
@@ -225,6 +231,7 @@
   margin-right: 18px;
   background-color: #313131;
   border-radius: 50%;
+  display: block;
 }
 
 .movies-card__photo {

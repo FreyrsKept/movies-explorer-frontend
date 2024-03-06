@@ -220,34 +220,6 @@ export default function App() {
     }
   }, [isCurrentUserLoggedIn]);
 
-  // async function handleUserRegistration({ name, email, password }) {
-  //   setIsProcessLoading(true);
-  //   try {
-  //     // navigate(ROUTE_MOVIES, { replace: true });
-  //     const res = await registerUser(name, email, password);
-  //     if (await res.ok) {
-  //       navigate(ROUTE_MOVIES, { replace: true });
-  //       console.log(res);
-  //       await handleUserAuthorization({ email, password });
-  //       setErrorMessages({ registrationResponse: "" });
-  //     } else {
-  //       setErrorMessages({
-  //         registrationResponse:
-  //           res.status === 500
-  //             ? validation.backend[500]
-  //             : res.status === 409
-  //               ? validation.backend[409]
-  //               : showDefaultError("регистрации пользователя"),
-  //       });
-  //     }
-  //   } catch (err) {
-  //     console.error(
-  //       `Ошибка в процессе регистрации пользователя на сайте: ${err}`
-  //     );
-  //   } finally {
-  //     setIsProcessLoading(false);
-  //   }
-  // }
   const handleUserRegistration = ({ name, email, password }) => {
     setIsProcessLoading(true);
     mainApi
@@ -458,25 +430,32 @@ export default function App() {
       .then(({ message }) => {
         if (pathMovies) {
           movie.dbId = message;
+
           const clone = { ...movie };
           clone.selected = false;
+
           if (message) {
             setSavedMovies((prevMovies) => [...prevMovies, clone]);
+
             if (movie.duration <= SHORT_FILM_DURATION) {
               setFilteredSavedMovies((prevMovies) => [...prevMovies, clone]);
             }
           } else {
             let key = movie.id;
+
             deleteMovie(savedMovies, key, setSavedMovies);
             deleteMovie(filteredSavedMovies, key, setFilteredSavedMovies);
           }
         } else {
           let key;
+
           for (let item of allMovies) {
             if (item.id === movie.movieId || item.id === movie.id) {
               key = item.id;
+
               item.dbId = null;
               item.selected = false;
+
               for (let filteredMovie of filteredAllMovies) {
                 if (filteredMovie.id === key) {
                   filteredMovie.dbId = null;
@@ -484,12 +463,15 @@ export default function App() {
                   break;
                 }
               }
+
               deleteMovie(savedMovies, key, setSavedMovies);
               deleteMovie(filteredSavedMovies, key, setFilteredSavedMovies);
+
               break;
             }
           }
         }
+
         localStorage.setItem("all-movies", JSON.stringify(allMovies));
         localStorage.setItem(
           "filtered-movies",
