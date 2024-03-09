@@ -1,5 +1,5 @@
-import React from "react";
-import { Outlet, Link, useMatch } from "react-router-dom";
+import React, { useState } from "react";
+import { Outlet, Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import useWindowDimensions from "../../hooks/useWindowDimensions.js";
@@ -9,26 +9,36 @@ import Navigation from "../Navigation/Navigation.js";
 
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu.js";
 
-function Header({
-  toggleHamburgerMenu,
-  isModalWindowOpened,
-  isHamburgerMenuOpened,
-  closeModalWindow,
-  closeHamburgerMenuOnOutsideAndNavClick,
-}) {
-  // ВРЕМЕННОЕ РЕШЕНИЕ ДЛЯ СТАТИЧНОЙ ВЕРСТКИ (НА 3-М ЭТАПЕ ПЕРЕДЕЛАТЬ ПОД АВТОРИЗАЦИЮ)
-  const href = useMatch({ path: `${window.location.pathname}`, end: false });
-  const isRootHref = href.pathnameBase === "/";
+import {
+  ROUTE_SIGNUP,
+  ROUTE_SIGNIN,
+  TABLET_SCREEN_WIDTH,
+} from "../../utils/constants.js";
 
-  const isMobileWidth = useWindowDimensions() <= 768;
+function Header({ isCurrentUserLoggedIn }) {
+  const [isModalWindowOpened, setIsModalWindowOpened] = useState(false);
+  const [isHamburgerMenuOpened, setIsHamburgerMenuOpened] = useState(false);
+
+  function openModalWindow() {
+    setIsModalWindowOpened(true);
+  }
+
+  function toggleHamburgerMenu() {
+    if (!isModalWindowOpened) {
+      openModalWindow();
+    }
+
+    setIsHamburgerMenuOpened(!isHamburgerMenuOpened);
+  }
+
+  const isMobileWidth = useWindowDimensions() <= TABLET_SCREEN_WIDTH;
 
   function renderHeaderMenu() {
-    if (!isRootHref && isMobileWidth) {
+    if (isMobileWidth && isCurrentUserLoggedIn) {
       return (
         <button
-          className={`btn hamburger${
-            (isHamburgerMenuOpened && " hamburger_clicked") || ""
-          }`}
+          className={`btn hamburger${(isHamburgerMenuOpened && " hamburger_clicked") || ""
+            }`}
           type="button"
           aria-label="Гамбургер-меню с навигацией по приложению"
           onClick={() => toggleHamburgerMenu()}
@@ -40,13 +50,14 @@ function Header({
       );
     }
 
-    if (isRootHref) {
+    if (!isCurrentUserLoggedIn) {
       return (
         <div className="header__auth">
-          <Link className="link" to={"/signup"}>
+          <Link className="link" to={ROUTE_SIGNUP}>
             Регистрация
           </Link>
-          <Link className="link link_color_accent btn-auth" to={"/signin"}>
+          <Link className="link link_color_accent btn-auth"
+            to={ROUTE_SIGNIN}>
             Войти
           </Link>
         </div>
@@ -68,11 +79,9 @@ function Header({
       {isMobileWidth && (
         <HamburgerMenu
           isModalWindowOpened={isModalWindowOpened}
+          setIsModalWindowOpened={setIsModalWindowOpened}
           isHamburgerMenuOpened={isHamburgerMenuOpened}
-          closeModalWindow={closeModalWindow}
-          closeHamburgerMenuOnOutsideAndNavClick={
-            closeHamburgerMenuOnOutsideAndNavClick
-          }
+          setIsHamburgerMenuOpened={setIsHamburgerMenuOpened}
         />
       )}
     </>
@@ -80,11 +89,8 @@ function Header({
 }
 
 Header.propTypes = {
-  toggleHamburgerMenu: PropTypes.func,
-  isModalWindowOpened: PropTypes.bool,
-  isHamburgerMenuOpened: PropTypes.bool,
-  closeModalWindow: PropTypes.func,
-  closeHamburgerMenuOnOutsideAndNavClick: PropTypes.func,
+  isCurrentUserLoggedIn: PropTypes.bool,
 };
+
 
 export default Header;

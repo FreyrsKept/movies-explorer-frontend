@@ -3,16 +3,23 @@ import { Link, NavLink } from "react-router-dom";
 
 import useWindowDimensions from "../../hooks/useWindowDimensions.js";
 
+import {
+  ROUTE_MAIN,
+  ROUTE_MOVIES,
+  ROUTE_SAVEDMOVIES,
+  ROUTE_PROFILE,
+} from "../../utils/constants.js";
+
 function Navigation() {
   const isMobileWidth = useWindowDimensions() <= 768;
 
   const links = [
     {
-      path: "/movies",
+      path: ROUTE_MOVIES,
       label: "Фильмы",
     },
     {
-      path: "/saved-movies",
+      path: ROUTE_SAVEDMOVIES,
       label: "Сохранённые фильмы",
     },
   ];
@@ -36,11 +43,11 @@ function Navigation() {
     <div className="layout-nav">
       <nav className="nav">
         <ul className="nav__list">
-          {isMobileWidth && createNavLink("/", "Главная")}
+          {isMobileWidth && createNavLink(ROUTE_MAIN, "Главная")}
           {links.map(({ path, label }) => createNavLink(path, label))}
         </ul>
       </nav>
-      <Link className="link link-profile" to={"/profile"}>
+      <Link className="link link-profile" to={ROUTE_PROFILE}>
       </Link>
     </div>
   );

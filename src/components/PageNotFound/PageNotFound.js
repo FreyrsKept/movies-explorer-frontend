@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import { useNavigate } from 'react-router-dom';
+import { ROUTE_MAIN, ROUTE_MOVIES } from "../../utils/constants";
 
-function PageNotFound() {
+function PageNotFound({ isCurrentUserLoggedIn }) {
   const navigate = useNavigate();
 
-  function handleClick() {
-    navigate(-1);
-  }
   return (
     <main>
       <section>
@@ -17,8 +16,10 @@ function PageNotFound() {
               <h1 className="not-found__heading">404</h1>
               <p className="not-found__paragraph">Страница не найдена</p>
             </div>
-            <Link className="link not-found__link" to={"/"}
-              onClick={handleClick}>
+            <Link
+              className="link not-found__link"
+              to={isCurrentUserLoggedIn ? ROUTE_MOVIES : ROUTE_MAIN}
+            >
               Назад
             </Link>
           </div>
@@ -27,5 +28,10 @@ function PageNotFound() {
     </main >
   );
 }
+
+PageNotFound.propTypes = {
+  isCurrentUserLoggedIn: PropTypes.bool,
+};
+
 
 export default PageNotFound;

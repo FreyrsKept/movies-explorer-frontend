@@ -1,10 +1,20 @@
-import React from "react";
-
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 import SearchForm from "../SearchForm/SearchForm.js";
 import MoviesCardList from "../MoviesCardList/MoviesCardList.js";
 import Footer from "../Footer/Footer.js";
 
-function SavedMovies() {
+function SavedMovies({
+  movies,
+  onSearch,
+  searchFormValue,
+  setIsSearchRequestInProgress,
+  hasUserSearched,
+  onMovieSelect,
+  onFilter,
+  isFilterCheckboxChecked,
+}) {
+  const [prevValueSavedMovies, setPrevValueSavedMovies] = useState("");
   const icon = (
     <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="21" height="21" rx="10.5" fill="#313131" />
@@ -14,13 +24,37 @@ function SavedMovies() {
 
   return (
     <>
-      <main>
-        <SearchForm />
-        <MoviesCardList icon={icon} />
+      <main id="saved-movies">
+        <SearchForm
+          onSearch={onSearch}
+          searchFormValue={searchFormValue}
+          setIsSearchRequestInProgress={setIsSearchRequestInProgress}
+          onFilter={onFilter}
+          isFilterCheckboxChecked={isFilterCheckboxChecked}
+          prevValue={prevValueSavedMovies}
+          setPrevValue={setPrevValueSavedMovies}
+        />
+        <MoviesCardList
+          movies={movies}
+          hasUserSearched={hasUserSearched}
+          icon={icon}
+          onMovieSelect={onMovieSelect}
+        />
       </main>
       <Footer />
     </>
   );
 }
+
+SavedMovies.propTypes = {
+  movies: PropTypes.array,
+  onMovieSelect: PropTypes.func,
+  onSearch: PropTypes.func,
+  hasUserSearched: PropTypes.bool,
+  searchFormValue: PropTypes.string,
+  setIsSearchRequestInProgress: PropTypes.func,
+  onFilter: PropTypes.func,
+  isFilterCheckboxChecked: PropTypes.bool,
+};
 
 export default SavedMovies;
